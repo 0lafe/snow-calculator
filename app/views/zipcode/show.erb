@@ -1,7 +1,7 @@
 <div class="center-column">
     <h1>Logs for <%= @zipcode.zipcode  %></h1>
 
-    <img class="map-img" src="https://maps.googleapis.com/maps/api/staticmap?center=<%= "#{@zipcode.zipcode}" %>&zoom=13&size=600x200&key=AIzaSyCOJ6MUrEJW9IqYy_UXTM2Np5dMTl4wwwE"/>
+    <img class="map-img" src="https://maps.googleapis.com/maps/api/staticmap?center=<%= "#{@zipcode.zipcode}" %>&zoom=13&size=600x200&key=<%= ENV["GOOGLE_API_KEY"] %>"/>
 
     <table class="table-class">
         <thead>
