@@ -3,6 +3,8 @@ class Zipcode < ApplicationRecord
     validates :zipcode, length: { is: 5 }
     validates :zipcode, uniqueness: true
 
+    validates_with ZipcodeValidator
+
     has_many :snow_logs
 
     def highest_snowfall
@@ -16,3 +18,4 @@ class Zipcode < ApplicationRecord
     end
 
 end
+

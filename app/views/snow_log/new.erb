@@ -1,9 +1,9 @@
-<div>
+<div class="center-column table-class">
     <h1>Adding data for zipcode <%= @zipcode.zipcode %></h1>
 
     <%= form_for(@new_log, url: "/zipcode/#{@zipcode.id}/snow_log") do |f| %>
         <%= f.label :inches %>
-        <%= f.text_field :inches %>
+        <%= f.text_field :inches, class: "form-fields" %>
         <%= f.submit "Add Log", class:"button" %>
     <% end %>
 

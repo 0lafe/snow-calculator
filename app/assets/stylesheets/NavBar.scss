@@ -7,6 +7,23 @@
 }
 
 .nav-bar-home {
-    padding: 1rem;
+    margin: 1rem;
     font-size: 2rem;
+    background: wheat;
+    border: black solid 0px 0px;
+    border-radius: 8px;
+}
+
+.nav-bar-home:hover {
+    background: whitesmoke;
+}
+
+.search-form {
+    display: inline;
+}
+
+.hypers li {
+    width: 40%;
+    float: left;
+    list-style-type: none;
 }

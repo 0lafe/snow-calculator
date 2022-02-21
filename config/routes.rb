@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     resources :snow_log, only: [:index, :new, :create]
   end
 
+  resources :search_handler, only: [:index]
+
 end

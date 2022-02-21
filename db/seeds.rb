@@ -9,9 +9,9 @@
 
 Zipcode.delete_all
 SnowLog.delete_all
-
-10.times do
-    zipcode = Zipcode.new(zipcode: "#{rand(10)}#{rand(10)}#{rand(10)}#{rand(10)}#{rand(10)}")
+zipcodes = ["02446", "02101", "02108", "02121", "02118", "02445"]
+zipcodes.each do |zc|
+    zipcode = Zipcode.create(zipcode: zc)
     if zipcode.valid?
         zipcode.save
         2.times do

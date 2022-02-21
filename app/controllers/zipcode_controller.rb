@@ -1,7 +1,7 @@
 class ZipcodeController < ApplicationController
 
     def index
-        @zipcodes = Zipcode.all
+        @zipcodes = Zipcode.all.sort {|a,b| b.highest_snowfall <=> a.highest_snowfall}
         render :index
     end
 
