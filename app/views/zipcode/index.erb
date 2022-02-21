@@ -1,0 +1,26 @@
+<div class="table-container">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Zipcode</th>
+                <th>Highest Reported Snow Fall (in)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @zipcodes.each do |zipcode| %>
+                <tr>
+                    <td><%= zipcode.zipcode %></td>
+                    <td><%= zipcode.highest_snowfall %></td>
+                    <td><%= link_to "Reports", zipcode_path(id: zipcode.id), class: "button" %></td>
+                </tr>
+            <% end %>
+
+            <tr>
+                <td><%= link_to "Add New Zipcode", new_zipcode_path, class: "button" %></td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,11 @@
+<div>
+    <h1>Adding New Zipcode</h1>
+
+    <%= form_for(@new_zipcode, url: "/zipcode") do |f| %>
+        <%= f.label :zipcode %>
+        <%= f.text_field :zipcode %>
+        <%= f.submit "Add Zipcode", class:"button" %>
+    <% end %>
+
+
+</div>

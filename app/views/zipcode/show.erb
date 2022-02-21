@@ -1,0 +1,25 @@
+<div>
+    <h1>Logs for <%= @zipcode.zipcode  %></h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date Reported</th>
+                <th>Amount Reported (in)</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% @zipcode.snow_logs.each do |log| %>
+                <tr>
+                    <td><%= log.created_at.to_date %></td>
+                    <td><%= log.inches %></td>
+                </tr>
+            <% end %>
+
+            <tr>
+                <td><%= link_to "Add Log", new_zipcode_snow_log_path(zipcode_id: @zipcode.id), class: "button" %></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

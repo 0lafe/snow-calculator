@@ -7,4 +7,8 @@ FactoryBot.define do
     password_confirmation { 'password' }
   end
 
+  factory :zipcode do
+    sequence(:zipcode) {|n| n.to_s * 5}
+  end
+
 end
