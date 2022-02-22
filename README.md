@@ -1,17 +1,7 @@
-# How to Use Me
+# Snow Calculator
 
-Assuming you are starting an app that you wish to call `rescue-mission` 
+Recmended ruby version: 3.0.2
 
-In your terminal:
+Run `bundle install` to prepare dependencies
 
-```
-git clone https://github.com/LaunchAcademy/rails-6-boilerplate
-cd rails-6-boilerplate 
-bundle
-yarn install
-```
-
-If you prefer, **you can rename your project with the `mv` command.**
-
-Starting from the directory above your app (likely challenges):
-mv <source_directory> <target_directory>
+Running `rails db:create` then `rails db:migrate` with make the database. `rails db:seed` will have some test data to work with
